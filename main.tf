@@ -9,6 +9,8 @@ resource "azurerm_service_plan" "appservice" {
   zone_balancing_enabled   = var.zone_balancing_enabled
   per_site_scaling_enabled = var.per_site_scaling_enabled
   site_config {
+    always_on                = true
     remote_debugging_enabled = true
   }
 }
+
